@@ -1,0 +1,2 @@
+<!--#config timefmt="%Y-%m-%dT%H:%M:%S%z" -->
+{"timestamp":"<!--#echo var="DATE_LOCAL" -->","source":"server","format":"iso8601"}

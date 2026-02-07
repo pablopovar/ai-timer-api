@@ -1,0 +1,7 @@
+DirectoryIndex index.shtml index.html
+
+Options +Includes
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.shtml [L]
