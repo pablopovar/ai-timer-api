@@ -1,7 +1,11 @@
-DirectoryIndex index.shtml index.html
-
-Options +Includes
+# ai-timer-api — rewrite random paths to scripts (cache-bust by path)
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.shtml [L]
+
+# TIME: /ai-timer-api/time/<anything>
+RewriteRule ^time/.*$ time.php [L,QSA]
+
+# TIMER: /ai-timer-api/timer/<minutes>
+RewriteRule ^timer/([0-9]{1,3})/?$ timer.php?m=$1 [L,QSA]
+
+# Optional: deny directory listing
+Options -Indexes
